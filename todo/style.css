@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 100vh;
+}
+.container {
+    background-color: rgb(245, 204, 3);
+    width: 50%;
+    height: 70%;
+    padding: 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(13, 9, 65);
+    border-radius: 5px;
+    box-shadow: rgb(13, 9, 65) 0px 20px 30px -10px;
+    position: relative;
+}
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    gap: 10px;
+}
+.input-section input {
+    width: 65%;
+    padding: 3px;
+    /* border: 1px solid rgb(13, 9, 65); */
+    border: none;
+    box-shadow: 1px 1px 1px rgb(13, 9, 65);
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+.input-section button {
+    padding: 3px;
+    background-color: rgb(52, 248, 35);
+    border: none;
+    box-shadow: 1px 1px 2px rgb(13, 9, 65);
+    /* margin-left: 5px; */
+    border-radius: 3px;
+}
+ul {
+    list-style: none;
+    padding: 3px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    gap: 10px;
+}
+li {
+    background-color: rgb(234, 230, 230);
+    padding: 3px;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 204, 3);
+    border-radius: 3px;
+    border: none;
+}
+li span {
+    padding: 3px;
+    background-color: rgb(13, 9, 65);
+    width: 100%;
+    box-shadow: 1px 1px 2px whitesmoke;
+    border-radius: 3px;
+    color: white;
+}
+li button {
+    background-color: rgb(225, 5, 5);
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 1px 1px 1px whitesmoke;
+}
