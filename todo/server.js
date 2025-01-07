@@ -12,6 +12,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const jsonPath = path.join(__dirname, "todo.json");
+const userPath = path.join(__dirname,"user.html")
 
 async function readJsonFile() {
   try {
@@ -41,7 +42,8 @@ const server = http.createServer(async (request, response) => {
   const todoPath = path.join(__dirname, "to-do.html");
   const scriptPath = path.join(__dirname, "script.js");
 
-  if (request.url === "/" && request.method === "GET") {
+
+  if (request.url === "/todo" && request.method === "GET") {
     try {
       const data = await fs.readFile(todoPath, "utf-8");
       response.writeHead(200, { "Content-Type": "text/html" });
@@ -50,7 +52,21 @@ const server = http.createServer(async (request, response) => {
       response.writeHead(500, { "Content-Type": "text/plain" });
       response.end("Error loading page");
     }
-  } else if (request.url === "/script.js" && request.method === "GET") {
+   }   //else if(request.url === "/user"  && request.method === "GET"){
+
+  //   try{
+  //     const data = await fs.readFile(userPath,"utf-8");
+  //     response.writeHead(200,{"content-type":"text/html"
+  //     });
+  //     response.end(data)
+  //   }catch(err){
+  //     response.writeHead(500,{"content-type":"text/plain"});
+  //     response.end("error for loading user page")
+  //   }
+
+  // }
+  
+  else if (request.url === "/script.js" && request.method === "GET") {
     try {
       const data = await fs.readFile(scriptPath, "utf-8");
       response.writeHead(200, { "Content-Type": "application/javascript" });
